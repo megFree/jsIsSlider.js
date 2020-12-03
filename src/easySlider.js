@@ -1,4 +1,4 @@
-export default function(selector, options) {
+module.exports = function(selector, options) {
 
   //@todo default options!!
   for (let option of Object.entries(options)) {

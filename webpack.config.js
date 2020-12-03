@@ -1,6 +1,7 @@
 const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = [
   {
@@ -17,9 +18,12 @@ module.exports = [
         {test: /\.css$/, use: ['style-loader', 'css-loader']}
       ]
     },
-    plugins: [new HtmlWebpackPlugin({
-      template: 'index.html'
-    })]
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'index.html'
+      }),
+      new CleanWebpackPlugin()
+    ]
   },
   {
     name: 'prod-lib',
@@ -34,6 +38,6 @@ module.exports = [
         {test: /\.js$/, use: 'babel-loader'}
       ]
     },
-    plugins: []
+    plugins: [new CleanWebpackPlugin()]
   }
 ]
