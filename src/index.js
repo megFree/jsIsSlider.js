@@ -1,10 +1,9 @@
-import EasySlider from './easySlider'
 import 'normalize.css'
+import createSlider from './createSlider'
 
 window.addEventListener('load', () => {
-  const slider = new EasySlider('.easy-slider-container', {
-    wrapper: '.easy-slider-wrapper',
-    slidesToScroll: 2,
+  const slider = new createSlider('.easy-slider-container', {
+    slidesToScroll: 1,
     slidesToShow: 3,
     slidesGrow: true,
     slideDuration: 200,

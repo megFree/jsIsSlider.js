@@ -21,21 +21,23 @@ module.exports = [
     plugins: [
       new HtmlWebpackPlugin({
         template: 'index.html'
-      }),
-      new CleanWebpackPlugin()
+      })
     ]
   },
   {
     name: 'prod-lib',
     mode: 'production',
-    entry: './src/easySlider.js',
+    entry: './src/createSlider.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'easySlider.bundle.js'
+      filename: 'easySlider.bundle.js',
+      library: 'EasySlider',
+      libraryTarget: 'umd'
     },
     module: {
       rules: [
-        {test: /\.js$/, use: 'babel-loader'}
+        {test: /\.js$/, use: 'babel-loader'},
+        {test: /\.css$/, use: ['style-loader', 'css-loader']}
       ]
     },
     plugins: [new CleanWebpackPlugin()]

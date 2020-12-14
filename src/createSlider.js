@@ -1,12 +1,10 @@
-module.exports = function(selector, options) {
+import './style.css'
+
+export const createSlider = (selector, options) => {
 
   //@todo default options!!
   for (let option of Object.entries(options)) {
 
-  }
-
-  const defaultOptions = {
-    wrapper: ''
   }
 
   initSlider(selector, options)
@@ -25,22 +23,18 @@ function initSlider(selector, options) {
   }
 
   const sliderContainer = sliderContainers[0]
-  sliderContainer.style.overflow = 'hidden'
-  sliderContainer.style.position = 'relative'
+  sliderContainer.classList.add(`_easy-slider-container`)
 
-  let sliderWrapper = sliderContainer.children[0]
-  const wrapperSelector = options.wrapper
-  if (wrapperSelector) {
-    sliderWrapper = sliderContainer.querySelector(wrapperSelector)
-  }
-  sliderWrapper.style.display = 'flex'
-  sliderWrapper.style.justifyContent = 'space-around'
-  sliderWrapper.style.position = 'relative'
+  const sliderWrapper = sliderContainer.children[0]
+  sliderWrapper.classList.add('_easy-slider-wrapper')
 
   const slides = Array.from(sliderWrapper.children)
+  slides.forEach(slide => {
+    slide.classList.add('_easy-slider-slide')
+  })
   if (options.slidesGrow) {
     slides.forEach(slide => {
-      slide.style.flexGrow = '1'
+      slide.classList.add('_easy-slider-slide-grow')
     })
   }
 
@@ -62,12 +56,9 @@ function initSlider(selector, options) {
     let nextPage = currentScrollPage
     const slidesToShow = options.slidesToShow
     const slidesToScroll = options.slidesToScroll
-    let pagesAmount = slidesAmount / slidesToScroll
-    console.log(`pagesAmount preCalc: ${pagesAmount}`)
-    if ((slidesToShow / 2) > slidesToScroll) {
-      pagesAmount = pagesAmount - (slidesToShow - slidesToScroll)
-    }
-    console.log(`pagesAmount: ${pagesAmount}, slidesToScroll: ${slidesToScroll}, slidesToShow: ${slidesToShow}`)
+    const slidesLeft = slidesAmount - slidesToShow
+    const initPageAmount = 1
+    const pagesAmount = (slidesLeft / slidesToScroll) + initPageAmount
 
     const mouseMoveHandler = event => {
       let nextPageControl = currentScrollPage
@@ -100,4 +91,3 @@ function initSlider(selector, options) {
   }
   sliderContainer.addEventListener('mousedown', mouseDownHandler)
 }
-
