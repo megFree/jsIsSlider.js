@@ -30,7 +30,7 @@ module.exports = [
     entry: './src/createSlider.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'easySlider.bundle.js',
+      filename: 'izSlider.min.js',
       library: 'EasySlider',
       libraryTarget: 'umd'
     },
