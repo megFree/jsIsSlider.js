@@ -1,12 +1,12 @@
 import 'normalize.css'
-import {createSlider} from './createSlider'
+import IsSlider from './IsSlider'
 
 window.addEventListener('load', () => {
-  createSlider('.easy-slider-container', {
+  const slider = new IsSlider('.easy-slider-container', {
     slidesToScroll: 1,
     slidesToShow: 3,
     slidesGrow: true,
     slideDuration: 200,
-    userSelect: true
+    userSelect: false
   })
 })

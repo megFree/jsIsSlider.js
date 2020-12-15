@@ -27,7 +27,7 @@ module.exports = [
   {
     name: 'prod-lib',
     mode: 'production',
-    entry: './src/createSlider.js',
+    entry: './src/IsSlider.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'izSlider.min.js',
