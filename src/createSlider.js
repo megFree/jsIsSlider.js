@@ -14,27 +14,30 @@ function initSlider(selector, options) {
   const sliderContainers = document.querySelectorAll(selector)
 
   if (sliderContainers.length === 0) {
-    console.error(`easySlider.js: Can't find slider container for '${selector}' selector.`)
+    console.error(`jsIsSlider.js: Can't find slider container for '${selector}' selector.`)
     return
   }
 
   if (sliderContainers.length > 1) {
-    console.warn(`easySlider.js: More than one slider containers were found for '${selector}' selector. Slider will use first selector.`)
+    console.warn(`jsIsSlider.js: More than one slider containers were found for '${selector}' selector. Slider will use first selector.`)
   }
 
   const sliderContainer = sliderContainers[0]
-  sliderContainer.classList.add(`_easy-slider-container`)
+  sliderContainer.classList.add(`_iz-slider-container`)
 
   const sliderWrapper = sliderContainer.children[0]
-  sliderWrapper.classList.add('_easy-slider-wrapper')
+  sliderWrapper.classList.add('_iz-slider-wrapper')
+  if (!options.userSelect) {
+    sliderWrapper.classList.add('_iz-slider-wrapper-no-user-select')
+  }
 
   const slides = Array.from(sliderWrapper.children)
   slides.forEach(slide => {
-    slide.classList.add('_easy-slider-slide')
+    slide.classList.add('_iz-slider-slide')
   })
   if (options.slidesGrow) {
     slides.forEach(slide => {
-      slide.classList.add('_easy-slider-slide-grow')
+      slide.classList.add('_iz-slider-slide-grow')
     })
   }
 
