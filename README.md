@@ -29,15 +29,15 @@ html
         <div class="easy-slider-container">
 
         <!-- Slides wrapper -->
-        <div class="easy-slider-wrapper">
+        <div>
 
             <!-- Slides -->
-            <div class="easy-slider-slide slide1">1</div>
-            <div class="easy-slider-slide slide2">2</div>
-            <div class="easy-slider-slide slide3">3</div>
-            <div class="easy-slider-slide slide4">4</div>
-            <div class="easy-slider-slide slide5">5</div>
-            <div class="easy-slider-slide slide6">6</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
         </div>
     </div>
 
