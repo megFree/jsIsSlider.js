@@ -49,7 +49,7 @@ html
 - slidesToScroll: number -  amount of slides to scroll by single iteration
 - slidesToShow: number - amount of slides to show on one page between iterations
 - slidesGrow: boolean - is every slide takes as much width as it can
-- slideDuration: number - time witch slider takes to do single iteration (ms) (buggy)
+- slideDuration: number - time which slider takes to do single iteration (ms) (buggy)
 - userSelect: boolean - is user can select slides content (buggy)
 
 ## Soon features
