@@ -11,7 +11,7 @@ Simple and lightweight pure js slider, the sponsor of your headache while instal
 Coming soon...
 
 ## Usage
-`import IsSlider from './IsSlider'`
+`import IsSlider from 'js-iz-slider'`
 
 `const slider = new IsSlider('.selector', optionsObject)`
 
