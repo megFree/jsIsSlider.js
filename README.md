@@ -11,9 +11,38 @@ Simple and lightweight pure js slider, the sponsor of your headache while instal
 Coming soon...
 
 ## Usage
-`import IsSlider from 'js-iz-slider'`
+javascript
 
-`const slider = new IsSlider('.selector', optionsObject)`
+    import IsSlider from 'js-iz-slider'
+    const slider = new IsSlider('.easy-slider-container', {
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesGrow: true,
+        slideDuration: 200,
+        userSelect: false
+    })
+
+    
+html
+    
+    <!-- Slider instance container -->
+        <div class="easy-slider-container">
+
+        <!-- Slides wrapper -->
+        <div class="easy-slider-wrapper">
+
+            <!-- Slides -->
+            <div class="easy-slider-slide slide1">1</div>
+            <div class="easy-slider-slide slide2">2</div>
+            <div class="easy-slider-slide slide3">3</div>
+            <div class="easy-slider-slide slide4">4</div>
+            <div class="easy-slider-slide slide5">5</div>
+            <div class="easy-slider-slide slide6">6</div>
+        </div>
+    </div>
+
+
+
 
 ## Options
 
