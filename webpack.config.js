@@ -31,8 +31,8 @@ module.exports = [
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'izSlider.min.js',
-      library: 'EasySlider',
-      libraryTarget: 'umd'
+      library: 'jsIsSlider',
+      libraryTarget: 'var'
     },
     module: {
       rules: [
