@@ -30,7 +30,7 @@ IsSlider.prototype.applyDefaultOptions = function() {
   for (const option of Object.entries(defaultOptions)) {
     const optionName = option[0]
     const optionValue = option[1]
-    if (!this.options[optionName] === undefined) {
+    if (this.options[optionName] === undefined) {
       this.options[optionName] = optionValue
     }
   }
