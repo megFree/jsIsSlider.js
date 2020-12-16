@@ -7,14 +7,26 @@ Simple and lightweight pure js slider, the sponsor of your headache while instal
 ### npm
 `npm install js-is-slider`
 
-### other
-Coming soon...
+### cdn
+`<script src="https://unpkg.com/js-iz-slider@1.0.15/dist/izSlider.min.js"></script>`
 
 ## Usage
 javascript
 
+npm
+
     import {IsSlider} from 'js-iz-slider'
     const slider = new IsSlider('.easy-slider-container', {
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        slidesGrow: true,
+        slideDuration: 200,
+        userSelect: false
+    })
+
+cdn
+
+    const slider = new jsIsSlider.IsSlider('.easy-slider-container', {
         slidesToScroll: 1,
         slidesToShow: 3,
         slidesGrow: true,
