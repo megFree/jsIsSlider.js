@@ -13,7 +13,7 @@ Coming soon...
 ## Usage
 javascript
 
-    import IsSlider from 'js-iz-slider'
+    import {IsSlider} from 'js-iz-slider'
     const slider = new IsSlider('.easy-slider-container', {
         slidesToScroll: 1,
         slidesToShow: 3,
