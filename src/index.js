@@ -1,5 +1,5 @@
 import 'normalize.css'
-import IsSlider from './IsSlider'
+import {IsSlider} from './IsSlider'
 
 window.addEventListener('load', () => {
   const slider = new IsSlider('.easy-slider-container', {

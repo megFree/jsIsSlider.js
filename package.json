@@ -1,6 +1,6 @@
 {
   "name": "js-iz-slider",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "slider, which will compete your skills, while you trying to set this up",
   "main": "dist/izSlider.min.js",
   "scripts": {

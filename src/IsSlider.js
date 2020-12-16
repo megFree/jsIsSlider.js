@@ -1,7 +1,7 @@
 import './style.css'
 import defaultOptions from './defaultOptions.json'
 
-function IsSlider(selector, options) {
+export function IsSlider(selector, options) {
   this.selector = selector
   this.options = options
   this.sliderContainer = null
@@ -22,7 +22,6 @@ function IsSlider(selector, options) {
     this.initEvents()
   } catch(e) {
     console.error(e)
-    return e
   }
 }
 
@@ -136,5 +135,3 @@ IsSlider.prototype.initEvents = function() {
   this.sliderContainer.addEventListener('mousedown', this.mouseDownHandler)
 }
 
-
-export default IsSlider
