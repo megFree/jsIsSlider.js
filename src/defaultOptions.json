@@ -3,5 +3,5 @@
   "slidesToShow": 3,
   "slidesGrow": true,
   "slideDuration": 200,
-  "userSelect": true
+  "userSelect": false
 }

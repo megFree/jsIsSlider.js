@@ -63,4 +63,4 @@ html
 "slidesToShow": 3, <br>
 "slidesGrow": true, <br>
 "slideDuration": 200, <br>
-"userSelect": true
+"userSelect": false
